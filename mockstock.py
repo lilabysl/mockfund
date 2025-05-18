@@ -18,7 +18,7 @@ st.title("Mock ISMF Live Operations")
 #data
 def generate_positions():
     positions = pd.DataFrame({
-        "Ticker": ["AAPL", "TSLA", "MSFT", "AMZN", "GOOGL"],
+        "Ticker": ["AAPL", "NVDA", "MSFT", "AMD", "GOOGL"],
         "Shares": np.random.randint(10, 100, 5),
         "Avg Cost": np.round(np.random.uniform(100, 300, 5), 2),
         "Last Price": np.round(np.random.uniform(80, 350, 5), 2),
