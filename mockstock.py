@@ -11,11 +11,11 @@ import numpy as np
 import time
 from datetime import datetime
 
-# Config
+#setupstuff
 st.set_page_config(page_title="Fund Ops Dashboard", layout="wide")
 st.title("Mock ISMF Live Operations")
 
-# Mock data generators
+#data
 def generate_positions():
     positions = pd.DataFrame({
         "Ticker": ["AAPL", "TSLA", "MSFT", "AMZN", "GOOGL"],
@@ -33,12 +33,12 @@ def generate_trade_volumes():
         "Volume": np.random.randint(100, 5000, len(dates))
     })
 
-# Layout
+#layout
 col1, col2 = st.columns(2)
 
 with col1:
     st.subheader("📊 Active Positions")
-    positions = generate_positions()  # Call the function here
+    positions = generate_positions()  
     st.dataframe(positions.style.highlight_max(axis=0))
 
     st.subheader("📈 Risk Metrics")
@@ -47,13 +47,13 @@ with col1:
 
 with col2:
     st.subheader("📅 Trade Volumes (30d)")
-    volumes = generate_trade_volumes()  # Call the function here
+    volumes = generate_trade_volumes()  
     st.bar_chart(volumes, x="Date", y="Volume")
 
     st.subheader("🔔 Recent Activity")
     for _ in range(5):
         st.text(f"{datetime.now().strftime('%H:%M:%S')} - Traded {np.random.choice(['AAPL', 'TSLA'])} (${np.random.randint(1000, 50000):,})")
-        time.sleep(0.1)  # Simulate real-time updates
+        time.sleep(0.1) #realtimeupdates
 
-# Auto-refresh every 15 seconds
+#refresh every 15s
 st.rerun()
