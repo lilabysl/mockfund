@@ -56,4 +56,4 @@ with col2:
         time.sleep(0.1)  # Simulate real-time updates
 
 # Auto-refresh every 15 seconds
-st.experimental_rerun()
+st.rerun()
