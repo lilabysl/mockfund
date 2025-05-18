@@ -13,7 +13,7 @@ from datetime import datetime
 
 # Config
 st.set_page_config(page_title="Fund Ops Dashboard", layout="wide")
-st.title("🚀 Student Fund Live Operations")
+st.title("Mock ISMF Live Operations ^_^")
 
 # Mock data generators
 def generate_positions():
