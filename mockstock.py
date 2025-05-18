@@ -46,11 +46,11 @@ with col1:
     st.metric("Value at Risk (1d)", f"${np.random.randint(500, 2000):,}")
 
 with col2:
-    st.subheader("📅 Trade Volumes (30d)")
+    st.subheader("Trade Volumes (30d)")
     volumes = generate_trade_volumes()  
     st.bar_chart(volumes, x="Date", y="Volume")
 
-    st.subheader("🔔 Recent Activity")
+    st.subheader("Recent Activity")
     for _ in range(5):
         st.text(f"{datetime.now().strftime('%H:%M:%S')} - Traded {np.random.choice(['AAPL', 'TSLA'])} (${np.random.randint(1000, 50000):,})")
         time.sleep(0.1) #realtimeupdates
