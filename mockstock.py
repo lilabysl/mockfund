@@ -15,8 +15,6 @@ from datetime import datetime
 st.set_page_config(page_title="Fund Ops Dashboard", layout="wide")
 st.title("Mock ISMF Live Operations")
 
-if st.button("Refresh Data"):
-    st.rerun(
         
 #data
 def generate_positions():
